@@ -10,3 +10,4 @@ What does our project consists in? We have identified ourselves into members of 
 Our online platform does not suffer any particular issue. However, we want to improve our recommender system. In this project, we will test different systems and select the most efficient one.
 
 #### 3) Methods
+We have been proposed 3 datasets containing information for: customers, transactions and articles. We have analyzed all of them through a deep explanatory data analysis. 
