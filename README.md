@@ -42,6 +42,8 @@ We have grouped them in age categories, calculated how many people belong to eac
 **Transactions**
 For transactions, we have a file that stores all the purchases made by each customers and the date in which they made it. We calculated the number of transactions per customer and the maximum value is 104 transactions made by a single customer. To get a better insight of the dataset, we have grouped all the transactions in classes. Only a small proportion of customers has done more than 30 transactions. We finally calculated also the number of customers that has bought each product.
 
+![Transaction Groups!](images/transactions_group.png 'Transaction Groups')
+
 **Articles**
 6536 articles are stored in our dataset, with all their characteristics. Each product belongs to many categories: they have a garment group, a section, a deparment, an index group and a type. We use the Explanatory Data Analysis to look for the best identifier for all the products. We have decided to discard the more precise classes to avoid overfitting and also too general ones, because they may lead to an inaccurate recommender system. We finally decided to take into consideration only the article type and section. Furthermore, we have noticed the presence of 'Unknown' items.
 Another attribute of the articles is the colour. Again, we have taken into consideration only the 'perceived_colour_master' which was, for us, the best middle way between dealing with overfitting and having a precise model.
