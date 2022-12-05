@@ -30,7 +30,8 @@ Explanatory Data Analysis is a fundamental process in Machine Learning for data 
 - Matplotlib.pyplot;
 - Seaborn.
 
-**Customers**. We have data for more then 40 thousands customers. For each of them, we have records of their identifier, if they are subscribed to fashion news, if they are part of the club member and their age. Through EDA we have noticed that there weas a small percentage of Null values (0.32%) in the age column. We decided to replace them by the average of the age of all the customers. 
+**Customers** <br>
+We have data for more then 40 thousands customers. For each of them, we have records of their identifier, if they are subscribed to fashion news, if they are part of the club member and their age. Through EDA we have noticed that there weas a small percentage of Null values (0.32%) in the age column. We decided to replace them by the average of the age of all the customers. 
 
 We have grouped them in age categories, calculated how many people belong to each of them and the proportion of people who is subscribed to either the club membership or to fashion news.
 
