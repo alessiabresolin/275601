@@ -1,9 +1,9 @@
 ## RECOMMENDER SYSTEM
 
 ### 1) Team members
-Alessia Bresolin (275601)
-Raffaele Girardi (265131)
-Alessandro Ivashkevich (276871)
+- Alessia Bresolin (275601)
+- Raffaele Girardi (265131)
+- Alessandro Ivashkevich (276871)
 
 ### 2) Introduction
 What does our project consists in? We have identified ourselves into members of the data science team of a prestigious fashion firm. Our primary aim is to boost the revenues of the company using any possible legal mean. 
@@ -41,6 +41,16 @@ We have grouped them in age categories, calculated how many people belong to eac
 
 **Transactions**
 For transactions, we have a file that stores all the purchases made by each customers and the date in which they made it. 
+
+**Articles**
+6536 articles are stored in our dataset, with all their characteristics. Each product belongs to many categories: they have a garment group, a section, a deparment, an index group and a type. We use the Explanatory Data Analysis to look for the best identifier for all the products. We have decided to discard the more precise classes to avoid overfitting and also too general ones, because they may lead to an inaccurate recommender system. We finally decided to take into consideration only the article type and section. Furthermore, we have noticed the presence of 'Unknown' items.
+Another attribute of the articles is the colour. Again, we have taken into consideration only the 'perceived_colour_master' which was for us the best middle way***********************
+
+
+
+
+
+
 
 
 ## 4) Recommender System
