@@ -35,7 +35,7 @@ We have data for more then 40 thousands customers. For each of them, we have rec
 
 We have grouped them in age categories, calculated how many people belong to each of them and the proportion of people who is subscribed to either the club membership or to fashion news.
 
-![Club Membership!](club_membership.png 'Club Membership')
+![Club Membership!](images/club_membership.png 'Club Membership')
 
 ![Fashion News!](images/fashion_news.jpg 'Fashion News')
 
