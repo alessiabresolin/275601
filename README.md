@@ -37,6 +37,8 @@ We have grouped them in age categories, calculated how many people belong to eac
 
 ![Club Membership!](club_membership.png 'Club Membership')
 
+![Fashion News!](images/fashion_news.jpg 'Fashion News')
+
 **Transactions**
 For transactions, we have a file that stores all the purchases made by each customers and the date in which they made it. 
 
