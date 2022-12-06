@@ -1,9 +1,9 @@
 ## RECOMMENDER SYSTEM
 
 ### 1) Team members
-Alessia Bresolin (275601)
-Raffaele Girardi (265131)
-Alessandro Ivashkevich (276871)
+- Alessia Bresolin (275601)
+- Raffaele Girardi (265131)
+- Alessandro Ivashkevich (276871)
 
 ### 2) Introduction
 What does our project consists in? We have identified ourselves into members of the data science team of a prestigious fashion firm. Our primary aim is to boost the revenues of the company using any possible legal mean. 
@@ -30,7 +30,7 @@ Explanatory Data Analysis is a fundamental process in Machine Learning for data 
 - Matplotlib.pyplot;
 - Seaborn.
 
-**Customers**
+**Customers** <br>
 We have data for more then 40 thousands customers. For each of them, we have records of their identifier, if they are subscribed to fashion news, if they are part of the club member and their age. Through EDA we have noticed that there weas a small percentage of Null values (0.32%) in the age column. We decided to replace them by the average of the age of all the customers. 
 
 We have grouped them in age categories, calculated how many people belong to each of them and the proportion of people who is subscribed to either the club membership or to fashion news.
@@ -39,9 +39,16 @@ We have grouped them in age categories, calculated how many people belong to eac
 
 ![Fashion News!](images/fashion_news.jpg 'Fashion News')
 
-**Transactions**
-For transactions, we have a file that stores all the purchases made by each customers and the date in which they made it. 
+**Transactions** <br>
+For transactions, we have a file that stores all the purchases made by each customers and the date in which they made it. We calculated the number of transactions per customer and the maximum value is 104 transactions made by a single customer. To get a better insight of the dataset, we have grouped all the transactions in classes. Only a small proportion of customers has done more than 30 transactions. We finally calculated also the number of customers that has bought each product.
 
+![Transaction Groups!](images/transactions_group.png 'Transaction Groups')
+
+**Articles** <br>
+6536 articles are stored in our dataset, with all their characteristics. Each product belongs to many categories: they have a garment group, a section, a deparment, an index group and a type. We use the Explanatory Data Analysis to look for the best identifier for all the products. We have decided to discard the more precise classes to avoid overfitting and also too general ones, because they may lead to an inaccurate recommender system. We finally decided to take into consideration only the article type and section. Furthermore, we have noticed the presence of 'Unknown' items.
+Another attribute of the articles is the colour. Again, we have taken into consideration only the 'perceived_colour_master' which was, for us, the best middle way between dealing with overfitting and having a precise model.
+
+#### d) Data Analysis
 
 ## 4) Recommender System
 Our recommender system generates a list of articles that a customer might be interested in, basing on its actual purchases and on the similarities with other users. 
