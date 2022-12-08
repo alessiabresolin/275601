@@ -58,31 +58,38 @@ Our recommender system generates a list of articles that a customer might be int
 The first type of recommendation system we have applied is: content filtering recommender system. 
 The final suggestions are shaped on the basis of features of the products, such as their color, their department and so on with all the other properties of the articles.
 
-- One Hot Encoding
+- **One Hot Encoding** <br>
 We create a one hot encoding for the colour value of the articles. We do the same for the section and the type of the product. We obtain 3 tables with ID of articles as rows and all the features as columns. Inside the tables, the value of a cell will be 1 if a specific article will have a specific feature. We finally concatenate all the tables.
 
-- Cosine Similarity
-To evaluate the similarity between products, we use cosine similarity, which avails of the cosine angle between two vectors. Clearly, the smaller the angle, the higher the degree of similarity. 
+- **Cosine Similarity** <br>
+To evaluate the similarity between products, we use cosine similarity, which avails of the cosine angle between two vectors. Clearly, the smaller the angle, the higher the degree of similarity.
 
-- Final step
+- **Final step** <br>
 We are now ready to return the 10 recommended items for the input product, identified by its ID. We have noticed that there is the possibility to receive as recommended item, the same output that the funnction gets as input. This is not a problem because a user might decide to buy again the same product. Anyway, we inserted a function that checks for this issue and in the case in happens, the recommender system will remove the input item and add the 11th item in the rank in the output. 
 
 ##### Collaborative filtering: matrix factorization
 The second type of recommendation system we have applied is: user-based filtering recommender system.
 This kind of system is based on the idea of considering customers' opinions on the different products and suggest an article based on other purchases of the user and purchases and opinions of customers that are similar to him. Basically, in this case, we use information collected by different customers to recommend products to the actual customer.
 
-- CSR Matrix
+- **CSR Matrix** <br>
 We began by creating a matrix with 'customer_id' and 'article_id' in order to map how many transactions have occured in the dataset. However, the matrix will have plenty of unobserved elements because each user purchases only a small amount of products with respect to the entirety of them. We calculated the sparsity of the matrix and we noticed its value was way too small to consider it to make reliable predictions. 
 
-- Increase sparsity
+- **Increase sparsity** <br>
 To limit this issue, we decided to consider only a part of the dataset. We discarded all the columns of the customers who bought less than a certain amount of products. Similarly, we discarded some of the rows that corresponded to the products that has been bought less.
 
-- KNN
-We imported KNN from 'sklearn' library in order to 
-We have an m × n matrix of transactions, with customers (id from 0 to n) and products (id from 0 to m).  
+- **KNN** <br>
+We imported KNN from 'sklearn' library. The algorithm finds clusters of similar users based on common transactions, and makes predictions using the average rating of top-k nearest neighbors.
+To evaluate the similarity, we use cosine similarity: the KNN algorithm will measure the distance to determine the “closeness” of instances.
 
 ##### Collaborative filtering: neural network
+The last method we used for the recommender system is the artificial neural network. In this case, we generate recommendations based on the similarity between users’ transactions, rather than the similarity of customers and articles (done through the utility matrix).
+
+- **Matrix factorization** <br>
+Matrix factorization is a way to understand the features or information underlying the interactions between customers and articles. To find similarities and make predictions we check for the association between customers and articles matrices.
+
+It works by decomposing the user-item interaction matrix into the product of two lower dimensionality rectangular matrices. We do this to counter the issue of sparsity because most customers buy only a minor set of customers.
+
+We use the loss function to look for the performance of our model and try to minimize the error.
 
 ## Final output
 Our recommender engine has been implemented to boost the revenues of our company by predicting user preferences and recommending the right products to each user. We have applied different kinds of recommendations using content-based and collaborative filtering systems. 
-
