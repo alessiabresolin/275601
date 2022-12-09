@@ -71,7 +71,6 @@ To evaluate the similarity between products, we use cosine similarity, which ava
 We are now ready to return the 10 recommended items for the input product, identified by its ID. We have noticed that there is the possibility to receive as recommended item, the same output that the funnction gets as input. This is not a problem because a user might decide to buy again the same product. Anyway, we inserted a function that checks for this issue and in the case in happens, the recommender system will remove the input item and add the 11th item in the rank in the output. 
 
 ![images!](images/content_based.png 'images')
-<img src="images/content_based.png" width="500" height="600" />
 
 ### b) Collaborative filtering: CRS matrix
 The second type of recommendation system we have applied is: user-based filtering recommender system.
@@ -88,7 +87,6 @@ We imported KNN from 'sklearn' library. The algorithm finds clusters of similar 
 To evaluate the similarity, we use cosine similarity: the KNN algorithm will measure the distance to determine the “closeness” of instances.
 
 ![images2!](images/crs_matrix.png 'images2')
-<img src="images/crs_matrix.png" width="500" height="600" />
 
 ### c) Collaborative filtering: neural network
 The last method we used for the recommender system is the artificial neural network. In this case, we generate recommendations based on the similarity between users’ transactions, rather than the similarity of customers and articles (done through the utility matrix).
