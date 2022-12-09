@@ -52,6 +52,8 @@ We use the Explanatory Data Analysis to look for the best identifier for all the
 
 Furthermore, we have noticed the presence of 'Unknown' items, which we have deleted because they represented just a small proportion of the data.
 
+![articles!](images/articles.png 'articles')
+
 ## 4) Recommender System
 Our recommender system generates a list of articles that a customer might be interested in, basing on its actual purchases and on the similarities with other users. 
 
